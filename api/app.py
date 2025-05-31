@@ -1,6 +1,4 @@
-from src import createApp
-
-app = createApp()
+from src import app
 
 if __name__ == "__main__":
     app.run(debug=True)
