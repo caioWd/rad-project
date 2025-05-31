@@ -1,6 +1,6 @@
 from database import db
 
-class Person(db.Model):
+class PersonModel(db.Model):
     __tablename__ = 'person'
     __table_args__ = {'sqlite_autoincrement': True}
     
@@ -20,7 +20,7 @@ class Person(db.Model):
     
     @classmethod
     def get_all(cls):
-        return cls.query.all()
+        return [person.json() for person in cls.query.all()]
     
     @classmethod
     def get_by_id(cls, id):
@@ -28,6 +28,16 @@ class Person(db.Model):
             return cls.query.filter_by(id=id).first()
         except Exception as e:
             print("Erro ao filtrar pessoa por ID", e)
+    
+    def json(self):
+        return {
+            "id": self.id,
+            "name": self.name,
+            "address": self.address,
+            "city": self.city,
+            "state": self.state,
+            "phone": self.phone
+        }
             
     def update_to_db(self, data):
         try:
