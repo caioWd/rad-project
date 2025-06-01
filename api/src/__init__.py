@@ -1,5 +1,6 @@
 from flask import Flask
 from src.controllers.user_controller import UserById, UserList
+from src.controllers.enrollment_controller import Enrollment
 from database import db
 from config import Config
 from flask_restful import Api
@@ -14,3 +15,4 @@ with app.app_context():
 
 api.add_resource(UserList, '/users')
 api.add_resource(UserById, '/users/<int:user_id>')
+api.add_resource(Enrollment, '/enrollments')

@@ -71,7 +71,13 @@ class UserService:
             user = User.get_by_id(user_id)
             if not user:
                 return {'message': 'Usuário não encontrado.'}, 404
+            
+            enrollment = user.enrollments[0] if user.enrollments else None
+            if enrollment and not enrollment.inactive_date:
+                return {'message': 'Usuário não pode ser deletado. Matrícula ainda está ativa.'}, 400
+            
             user.delete_to_db()
             return {'message': 'Usuário deletado com sucesso.'}, 200
         except Exception as e:
+            print("Erro ao deletar usuário:", e) 
             return {'message': str(e)}, 500
