@@ -1,6 +1,7 @@
 from flask import Flask
 from src.controllers.user_controller import UserById, UserList
 from src.controllers.enrollment_controller import Enrollment
+from src.controllers.payments_controller import Payment
 from database import db
 from config import Config
 from flask_restful import Api
@@ -16,3 +17,4 @@ with app.app_context():
 api.add_resource(UserList, '/users')
 api.add_resource(UserById, '/users/<int:user_id>')
 api.add_resource(Enrollment, '/enrollments')
+api.add_resource(Payment, '/enrollments/<int:enroll_id>/payments')
