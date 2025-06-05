@@ -1,11 +1,16 @@
 # Relatório - RAD
 
-## Projeto: Sistema de Administração da Academia de Cross Training (CrossX)  
-**Disciplina**: Desenvolvimento Rápido de Aplicações em Python 
+## Projeto: Sistema de Administração da Academia de Cross Training (CrossX)
+
+**Disciplina**: Desenvolvimento Rápido de Aplicações em Python
 **Professor(a)**: Cynthia Moreira Maia  
-**Equipe**: Caio Wendel, Ingrid Araújo e Pedro Arthur 
+**Equipe**: Caio Wendel, Ingrid Araújo e Pedro Arthur
 
 ---
+
+## 1. Link repositório FRONT-END
+
+Repositório Front-End: https://github.com/mrsingrid/crossx-frontend/tree/main.
 
 ## 1. Planejamento de Requisitos
 
@@ -36,8 +41,6 @@ Com os requisitos definidos, partimos para o desenvolvimento:
 
 - **Back-end**: Desenvolvido com **Flask**, seguindo boas práticas de organização de código e tratamento de exceções.
 
-
-
 ---
 
 ## 4. Testes
@@ -57,7 +60,6 @@ Testamos:
 Após os testes, o sistema foi integrado com o front-end e preparado para entrega.
 
 ---
-
 
 ## Conclusão
 
